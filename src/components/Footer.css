@@ -1,0 +1,75 @@
+/* Footer.css */
+.footer {
+    /* background: linear-gradient(135deg, #000000, #434343); */
+    color: #ffffff;
+    background-color: black;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    padding-bottom: 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-left {
+    max-width: 300px;
+    margin-left: 120px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer-left a{
+    color: white;
+  }
+
+  .footer-left h2{
+    color: white;
+  }
+  
+  .footer-connect-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    margin: 0 20px;
+  }
+  
+  .footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    
+  }
+  
+  .gmap {
+    height: 200px;
+    width: 300px;
+    margin-top: 0px;
+  }
+  

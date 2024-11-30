@@ -1,0 +1,223 @@
+/* Sitemap.css - Black & White Gradient Theme */
+
+.sitemap-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #333333 50%, #666666 100%);
+    padding: 3rem 1rem;
+    color: #ffffff;
+  }
+  
+  .sitemap-wrapper {
+    max-width: 95%;
+    margin: 0 auto;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+  }
+  
+  .sitemap-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1.5rem;
+  }
+  
+  .sitemap-title {
+    font-family: "Inter", sans-serif;
+    font-size: 2.6rem;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .sitemap-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #ffffff;
+    opacity: 0.9;
+  }
+  
+  .sitemap-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .sitemap-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .sitemap-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+  }
+  
+  .section-title {
+    color: #ffffff;
+    font-size: 1.45rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .link-item {
+    margin-bottom: 0.75rem;
+    position: relative;
+  }
+  
+  .link-item a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    display: block;
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+  
+  .link-item a:hover {
+    color: #ffffff;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    );
+    transform: translateX(5px);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .sitemap-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .sitemap-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  
+    .sitemap-header {
+      margin-bottom: 2rem;
+    }
+  
+    .sitemap-title {
+      font-size: 2rem;
+    }
+  
+    .sitemap-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  
+    .sitemap-wrapper {
+      padding: 1rem;
+    }
+  }
+  
+  /* Focus styles for accessibility */
+  .link-item a:focus {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Loading state styles */
+  .sitemap-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+  }
+  
+  .sitemap-loading::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  
+  .sitemap-error {
+    color: #ff4444;
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 68, 68, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 68, 68, 0.2);
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Hover animation for links */
+  @keyframes linkHover {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Additional hover effects */
+  .sitemap-section:hover .section-title {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  .link-item a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+  }
+  
+  .link-item a:hover::after {
+    width: 100%;
+  }
+  
